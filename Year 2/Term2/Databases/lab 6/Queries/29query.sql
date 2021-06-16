@@ -1,0 +1,5 @@
+use University;
+
+SELECT Name_teacher, SALARY
+FROM TEACHER 
+ORDER BY NAME_TEACHER DESC;

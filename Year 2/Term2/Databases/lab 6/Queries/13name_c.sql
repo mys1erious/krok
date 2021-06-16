@@ -1,0 +1,6 @@
+use University;
+
+SELECT NAME_TEACHER, DATA_HIRE AS 'Hire date', 
+DATEADD(month, 3, DATA_HIRE) AS 'Plus 3 months' 
+FROM TEACHER 
+WHERE (NAME_TEACHER) LIKE '3%';

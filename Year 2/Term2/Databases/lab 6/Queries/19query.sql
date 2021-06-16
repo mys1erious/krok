@@ -1,0 +1,7 @@
+use University;
+
+SELECT d.NAME_KAFEDRA, t.DOLGNOST, SUM(t.SALARY) as 'Sum salary', AVG(t.SALARY) as 'Avg salary'
+FROM FACULTET f, KAFEDRA d, Teacher t
+WHERE d.Kod_KAFEDRA = t.Kod_KAFEDRA
+
+GROUP BY d.NAME_KAFEDRA, t.DOLGNOST;
