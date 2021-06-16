@@ -1,11 +1,3 @@
-'''
-Computational Mathematics
-Lab №4
-# 1
-
-Author: Eugene Lavrinovych
-'''
-
 
 import matplotlib.pyplot as plt
 import numpy as np

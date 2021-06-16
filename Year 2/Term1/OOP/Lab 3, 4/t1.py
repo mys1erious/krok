@@ -1,7 +1,5 @@
 '''
 First task from oop lab 4
-
-Author: Eugene Lavrinovych
 '''
 
 

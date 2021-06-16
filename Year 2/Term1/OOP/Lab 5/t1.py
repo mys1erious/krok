@@ -1,7 +1,5 @@
 '''
 First task from oop lab 5
-
-Author: Eugene Lavrinovych
 '''
 
 import math

@@ -1,12 +1,3 @@
-'''
-Computational Mathematics
-Lab №2
-# 1
-
-Author: Eugene Lavrinovych
-'''
-
-
 import math
 
 

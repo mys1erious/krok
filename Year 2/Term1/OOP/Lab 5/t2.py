@@ -1,7 +1,5 @@
 '''
 Second task from oop lab 5
-
-Author: Eugene Lavrinovych
 '''
 from abc import ABC
 

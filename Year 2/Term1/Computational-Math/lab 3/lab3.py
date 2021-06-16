@@ -1,12 +1,3 @@
-'''
-Computational Mathematics
-Lab №3
-# 1
-
-Author: Eugene Lavrinovych
-'''
-
-
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.misc import derivative
