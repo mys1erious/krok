@@ -1,7 +1,5 @@
 '''
 Middle test
-
-Author: Lavrinovych Eugene
 '''
 
 from abc import ABC, abstractmethod
