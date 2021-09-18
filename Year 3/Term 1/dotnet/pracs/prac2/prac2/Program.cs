@@ -1,4 +1,4 @@
-﻿namespace labs
+﻿namespace prac2
 {
     internal class Program
     {

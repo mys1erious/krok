@@ -1,14 +1,15 @@
 ﻿using System;
 
-namespace pracs
+
+namespace prac1
 
 
 {
-    class Program
+    internal class Program
     {
         public static void Main(string[] args)
         {
-            
+            PracExamples.Ex14.Exec();
         }
     }
 }
