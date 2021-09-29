@@ -5,11 +5,11 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{41B3FBF2-059D-4CCD-BD9B-34FF1694E30E}</ProjectGuid>
+        <ProjectGuid>{4265807B-9370-46F7-A997-EFE62FDA29FA}</ProjectGuid>
         <OutputType>Exe</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>prac2</RootNamespace>
-        <AssemblyName>prac2</AssemblyName>
+        <RootNamespace>Ind1</RootNamespace>
+        <AssemblyName>Ind1</AssemblyName>
         <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
     </PropertyGroup>
