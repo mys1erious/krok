@@ -20,7 +20,6 @@ namespace Ind1
         {
             Console.WriteLine("Tests: ");
             
-            
             double task_1_17_m = Task_1_17_m(2, 3, 4);
             bool task_3_2_v = Task_3_2_v(false, true, false);
             bool task_3_6_e = Task_3_6_e(false, false, true);
