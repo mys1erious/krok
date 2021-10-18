@@ -5,7 +5,7 @@ using System.Linq;
 namespace Ind3
 
 {
-    internal class Program
+    public static class Ind3
     {
         public static void Main(string[] args)
         {
@@ -18,7 +18,7 @@ namespace Ind3
             bool[] task_3_29_e = {Task_3_29_e(1, 1, 1), Task_3_29_e(1, 101, 1)};
             int task_4_8 = Task_4_8(1, 3000);
             String task_4_97 = Task_4_97(4);
-
+        
             double[] task_5_17_x = new double[25];
             for (int i = 0; i < task_5_17_x.Length; i++)
                 task_5_17_x[i] = i + 4;
@@ -27,13 +27,13 @@ namespace Ind3
             int[] task_6_28_a = Task_6_28_a(123945678);
             List<int> task_7_10 = Task_7_10(8);
             int task_11_19_a = Task_11_19_a(new int[]{1, 2, 3, 4, 5});
-
+        
             int[] task_11_44_array = new int[20];
             Random task_11_44_randNum = new Random();
             for (int i = 0; i < task_11_44_array.Length; i++)
                 task_11_44_array[i] = task_11_44_randNum.Next(0, 10);
             int[] task_11_44 = Task_11_44(task_11_44_array);
-
+        
             int[,] task_12_25_z = Task_12_25_z();
             
             
@@ -62,50 +62,49 @@ namespace Ind3
                 {
                     Console.Write("{0} ", task_12_25_z[i, j]);
                 }
-
+        
                 Console.Write(Environment.NewLine + Environment.NewLine);
             }
         }
 
 
-        static double Task_1_17_m(double a, double b, double c)
+        public static double Task_1_17_m(double a, double b, double c)
         {
-            // Задание: Записать по правилам изучаемого языка программирования выражение
             return Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2) - 2 * a * b * Math.Cos(c));
         }
 
         
-        static bool Task_3_2_v(bool x, bool y, bool z)
+        public static bool Task_3_2_v(bool x, bool y, bool z)
         {
-            // Задание: Вычислить значение логического выражения
             return x & z;
         }
 
 
-        static bool Task_3_6_e(bool x, bool y, bool z)
+        public static bool Task_3_6_e(bool x, bool y, bool z)
         {
-            // Задание: Вычислить значение логического выражения
             return x | !(y | z);
         }
 
 
-        static bool Task_3_12_d(int x, int y)
+        public static bool Task_3_12_d(int x, int y)
         {
-            // Задание: Вычислить значение логического выражения
             return (x * y != 0) || (y < x);
         }
+        
 
-
-        static bool Task_3_29_e(int x, int y, int z)
+        public static bool Task_3_29_e(int x, int y, int z)
         {
             // Задание: Записать условие, которое является истинным, когда хотя бы одно из чисел x, y, z больше 100
             return (x | y | z) > 100;
         }
 
 
-        static int Task_4_8(double km, double ft)
+        public static int Task_4_8(double km, double ft)
         {
-            // Задание: Известно 2 расстояние в км. и футах (1фут = 0.45м) какое из расстояний меньше?
+            // Задание: Известно 2 расстояние в км. и футах (1фут = 0.45м) какое из расстояний меньше
+            
+            if (km < 0 || ft < 0)
+                return -1;
             
             double kmToMeters = km * 1000;
             double ftToMeters = ft * 0.45;
@@ -114,9 +113,9 @@ namespace Ind3
             if (kmToMeters <= ftToMeters) return 1;
             return 2;
         }
-
         
-        static String Task_4_97(int month)
+        
+        public static String Task_4_97(int month)
         {
             // Задание: Составить программу, которая в зависимости от порядкового номера
             //          месяца выводит на экран время года, к которому относится месяц
@@ -143,9 +142,9 @@ namespace Ind3
             }
             return "";
         }
+        
 
-
-        static double[] Task_5_17(double[] x)
+        public static double[] Task_5_17(double[] x)
         {
             // Задание: Рассчитать значения y для значений x
 
@@ -160,13 +159,16 @@ namespace Ind3
 
             return y;
         }
-
-
-        static int[] Task_6_28_a(int x)
+        
+        
+        public static int[] Task_6_28_a(int x)
         {
             // Задание: Дано натуральное число, в котором все цифры различны,
             //          определить порядковый номер максимальной цифры(от начала и конца)
 
+            if (x <= 0)
+                throw new ArgumentException("Input value has to be > 0");
+            
             var xStack = new Stack<int>();
             for (; x > 0; x /= 10)
                 xStack.Push(x % 10);
@@ -181,13 +183,16 @@ namespace Ind3
 
             return new int[] { idxFromStart, idxFromEnd };
         }
+        
 
-
-        static List<int> Task_7_10(int n)
+        public static List<int> Task_7_10(int n)
         {
             // Задание: Найти все двузначные числа, которые делятся на n
             //          или содержат цифру n
 
+            if (n == 0)
+                throw new ArgumentException("Input value cant be 0");
+            
             var resultList = new List<int>();
             
             for (int val = 10; val < 100; val++)
@@ -198,9 +203,9 @@ namespace Ind3
 
             return resultList;
         }
-
-
-        static void Task_8_4_v()
+        
+        
+        public static void Task_8_4_v()
         {
             // Задание: Напечатать числа в виде таблицы(треугольника)
             int val = 30;
@@ -215,16 +220,16 @@ namespace Ind3
                 Console.WriteLine(row.Remove((i+1)*2 + spaces*i));
             }
         }
+        
 
-
-        static int Task_11_19_a(int[] arr)
+        public static int Task_11_19_a(int[] arr)
         {
             // Задание: Определить сумму всех элеменов массива
             return arr.Sum();
         }
+        
 
-
-        static int[] Task_11_44(int[] arr)
+        public static int[] Task_11_44(int[] arr)
         {
             // Задание: Массив хранит информацию о количестве побед 20 команд
             //          определить номера команд, имеющих меньше 3 побед
@@ -238,9 +243,9 @@ namespace Ind3
 
             return result.ToArray();
         }
+        
 
-
-        static int[,] Task_12_25_z()
+        public static int[,] Task_12_25_z()
         {
             // Задание: Заполнить массив определенным образом
             int rowLen = 12;
