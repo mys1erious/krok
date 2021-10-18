@@ -665,3 +665,5 @@ FodyWeavers.xsd
 
 lectures
 Lectures
+*.pdf
+*.xlsx
