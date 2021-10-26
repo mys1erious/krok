@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 
 namespace Ind4
 {
@@ -38,6 +39,7 @@ namespace Ind4
         
         public Vector()
         {
+            Data = Array.Empty<double>();
         }
         
         
@@ -176,23 +178,29 @@ namespace Ind4
         public int Count { get; set; }
         
         
-        public int Length
-        {
-            get { return Data.Length; }
-            set {}
-        }
-        
-        
+        public int Length => Data.Length;
+
+
         // Getter and Setter of vector
         public double this[int index]
         {
             get
             {
+                if (index >= Length)
+                    throw new Exception("Index is outside the bounds of vector");
+                if (index < 0)
+                    index = Length + index;
+                
                 return Data[index];
             }
 
             set
             {
+                if (index >= Length)
+                    throw new Exception("Index is outside the bounds of vector");
+                if (index < 0)
+                    index = Length + index;
+                
                 Data[index] = value;
             }
         }

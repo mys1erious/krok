@@ -222,9 +222,6 @@ namespace Ind3.UnitTests
         }
         
         
-        //Task_8_4_v Test ? !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-        
         [Test]
         public void Task_11_19_a_Test()
         {

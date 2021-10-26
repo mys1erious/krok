@@ -115,7 +115,7 @@ namespace Ind3
         }
         
         
-        public static String Task_4_97(int month)
+        public static string Task_4_97(int month)
         {
             // Задание: Составить программу, которая в зависимости от порядкового номера
             //          месяца выводит на экран время года, к которому относится месяц
