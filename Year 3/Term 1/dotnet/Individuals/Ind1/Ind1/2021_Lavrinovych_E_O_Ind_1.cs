@@ -71,7 +71,6 @@ namespace Ind1
                 {
                     Console.Write("{0} ", task_12_25_z[i, j]);
                 }
-
                 Console.Write(Environment.NewLine + Environment.NewLine);
             }
         }
