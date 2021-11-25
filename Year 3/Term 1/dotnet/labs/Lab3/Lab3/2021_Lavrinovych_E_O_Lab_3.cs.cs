@@ -28,7 +28,9 @@ namespace Lab3
             
             Console.WriteLine($"\nTask_3_6:\n" +
                               $"for a = {a}, b = {b}; new a = {task_3_6.Item1}, b = {task_3_6.Item2}");
-        }
+
+        
+    }
         
         
         // Task_3_1

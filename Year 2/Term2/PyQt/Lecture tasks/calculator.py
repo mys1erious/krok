@@ -72,7 +72,7 @@ class MainWindow(qtw.QWidget):
             pass
         elif text == '=':
             if '=' in self.data:
-                s = self.data.index('=') # 10+14=14; s=5; del self.data[:6]
+                s = self.data.index('=')
                 del self.data[:s+1]
             else:
                 data_res = '='

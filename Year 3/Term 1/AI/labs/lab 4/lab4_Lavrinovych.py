@@ -200,7 +200,6 @@ def average_of_population(array):
     return sum(tmp_sums) // len(tmp_sums)
 
 
-# Checks 3 last distances for equality
 def verify_distances(array):
     g = groupby(array)
     return next(g, True) and not next(g, False)
