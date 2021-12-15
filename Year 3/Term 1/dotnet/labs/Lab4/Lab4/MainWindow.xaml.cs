@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Net.Mime;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -10,7 +9,6 @@ namespace Lab4
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     
-    // TRY REWORK FOR EVAL
     public partial class MainWindow
     {
         public double Num1 { get; set; }
@@ -41,7 +39,7 @@ namespace Lab4
             else
             {
                 Num2 = (Num2 * 10) + btnValue;
-                TextBox.Text += Num2.ToString();
+                TextBox.Text += btnValue;
             }
         }
 
@@ -58,33 +56,42 @@ namespace Lab4
             else
                 TextBox.Text += $"{Operation}";
 
-            if (Num1 != 0 && Num2 != 0)
-            {
-                switch (Operation)
-                {
-                    case "/":
-                        Num1 = Divide(Num1, Num2);
-                        break;
-                    case "*":
-                        Num1 = Multiply(Num1, Num2);
-                        break;
-                    case "-":
-                        Num1 = Subtract(Num1, Num2);
-                        break;
-                    case "+":
-                        Num1 = Add(Num1, Num2);
-                        break;
-                }
-                Num2 = 0;
-            }
+            (Num1, Num2) = OperationHandle(Num1, Num2);
             
             Operation = curOperation;
             TextBox.Text = $"{Num1}{Operation}";
         }
 
+        private (double, double) OperationHandle(double num1, double num2)
+        {
+            if (num1 != 0 && num2 != 0)
+            {
+                switch (Operation)
+                {
+                    case "/":
+                        num1 = Divide(num1, num2);
+                        break;
+                    case "*":
+                        num1 = Multiply(num1, num2);
+                        break;
+                    case "-":
+                        num1 = Subtract(num1, num2);
+                        break;
+                    case "+":
+                        num1 = Add(num1, num2);
+                        break;
+                }
+                num2 = 0;
+            }
+
+            return (num1, num2);
+        }
+
         private void ButtonResult_Click(object sender, RoutedEventArgs e)
         {
-            
+            (Num1, Num2) = OperationHandle(Num1, Num2);
+            Operation = null;
+            TextBox.Text = $"{Num1}";
         }
         
         private void ButtonClear_Click(object sender, RoutedEventArgs e)

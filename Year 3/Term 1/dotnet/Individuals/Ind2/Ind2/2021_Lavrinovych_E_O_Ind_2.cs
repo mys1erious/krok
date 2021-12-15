@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 namespace Ind2
 
 {
-    public class Vector
+    public static class Program
     {
         public static void Main(string[] args)
         {
@@ -36,8 +36,10 @@ namespace Ind2
             Console.WriteLine($"Element after replacement at index {index} in v2 = {v2[index]}");
             Console.WriteLine($"v2 = {v2}");
         }
-        
-        
+    }
+    
+    public class Vector
+    {
         public Vector()
         {
         }
@@ -75,7 +77,7 @@ namespace Ind2
         }
         
         
-        public double[] Data { get; set; }
+        private double[] Data { get; }
 
 
         // Addition
