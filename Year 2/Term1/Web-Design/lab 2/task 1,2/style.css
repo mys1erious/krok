@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    background: #31344e url("img/_intro-bg.jpg") center no-repeat;
+    background-size: cover;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color:#40DABA;
+}
+
+
+/* Container
+===================*/
+.container {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+
+/* Header
+===================*/
+
+.header {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px;
+    border-bottom: 1px solid #515369;
+}
+
+
+/* Nav
+===================*/
+
+.nav {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav__link {
+    margin-left: 50px;
+    color: #fff;
+    text-decoration: none;
+    opacity: .75;
+    transition: .10s;
+}
+
+
+/* Intro
+===================*/
+.intro {
+    height: 750px;
+    padding-top: 20%;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 100px;
+    font-size: 16px;
+    height: 500px;
+    margin: 0px 40px 30px 40px;
+}
+
+.container2 > div {
+    border: 1px solid black; 
+    background-color: #dd3434;
+    color: white;
+}
+
+.container2 > div > p {
+    font-size: 25px;
+    text-align: center;
+}
+
+.rb {
+    text-align: center;
+}
+
+.textarea {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.cb {
+    padding-top: 50px;
+    text-align: center;   
+}
+
+.cb > div {
+    text-align: left;
+    margin-left: 50px;
+}
+
+
+.bt {
+    width: 150px;
+    margin-top: 250px;
+}
+
+}
+.intro__inner {
+    width: 100%;
+    max-width: 970px;
+}
+
+
+.intro__title {
+    margin: 10px 140px 25px 140px;
+    font-size: 100px;
+    line-height: 1.1;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.intro__subtitle {
+    margin-bottom: 60px;
+    font-size: 30px;
+    color: #fff;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+/* Button
+===================*/
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 14px 40px;
+
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background .1s linear;
+
+}
+
+.btn--red {
+    background-color: #e84545;
+}
+
+.btn--red:hover {
+    background-color: #dd3434;
+}
+
+.btn--white {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 300px;
+}
