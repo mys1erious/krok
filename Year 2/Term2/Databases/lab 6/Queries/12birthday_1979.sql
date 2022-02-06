@@ -1,5 +1,0 @@
-use University;
-
-SELECT Name_teacher, BIRTHDAY 
-FROM TEACHER 
-WHERE DATENAME(YEAR, BIRTHDAY) = 2012;
