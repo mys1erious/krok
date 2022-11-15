@@ -4,7 +4,7 @@ import time
 
 class MyThread(threading.Thread):
     def __init__(self, name, delay):
-        threading.Thread.__init__(self)
+        super().__init__()
 
         self.name = name
         self.delay = delay
