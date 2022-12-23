@@ -31,7 +31,8 @@ class Thread(threading.Thread):
         self.res = res
 
     def run(self):
-        self.res[0] += calc_file(self.filename)
+        res = calc_file(self.filename)
+        self.res[0] += res
 
 
 def get_filename(i):
